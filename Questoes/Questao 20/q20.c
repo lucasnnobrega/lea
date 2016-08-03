@@ -2,6 +2,12 @@
 #include <string.h>
 //#include <stdlib.h>
 
+/*
+Posição da função qant_x_preco() alterada pois a função 
+ q20() precisa saber que ela existe
+*/
+
+
 void qant_x_preco(float preco, int* total)
 {
     int quantidade = 0;
@@ -12,18 +18,18 @@ void qant_x_preco(float preco, int* total)
 
     printf("preco é: %f \n", preco);
     printf("total parcial: %f \n \n", *total);
-    printf("endereço de total: %d", &total);
+    printf("endereço de total: %d", &total); //aqui aparece um endereço
 
-    *total = *total + ((float)quantidade * preco);
+    *total = *total + ((float)quantidade * preco);//essa equação não está funcionando
 
     printf("preco é: %f \n", preco);
     printf("total parcial: %f \n \n", *total);
-    printf("endereço de total: %d", &total);
+    printf("endereço de total: %d", &total);//aqui aparece outro totalmente diferente
 
 
 }
 
-void q20(int* contrl)
+void q20(int* contrl) //mudança no nome da variavel
 {
     static float total = 0;
 	char codigoproduto[4];
@@ -97,7 +103,7 @@ int main ()
 
 	do{
         q20(&var);
-	}while(var);
+	}while(var); //esse while precisa de ; interessante!
 
 }
 
