@@ -1,0 +1,7 @@
+git clone URL
+
+git status
+
+git commit -m "string to commit"
+
+git pull
