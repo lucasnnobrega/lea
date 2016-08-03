@@ -1,7 +1,37 @@
 git clone URL
+para copiar um repositório da web
 
 git status
+mostra os arquivos para adicionar
 
 git commit -m "string to commit"
+faz o commit das alteraçoes
 
 git pull
+faz o upload dos dados alterados
+
+git branch
+ver os ramos do repositório
+
+git branch "new_branch"
+para criar novos ramos
+
+git checkout "new_branch"
+para mudar de ramo
+
+git checkout -b "new_branch"
+para criar e mudar de ramo
+
+git branch -d "new_branch"
+para remover ramos locais
+
+###########!!!CUIDADO!!!############
+#   git push origin :"new_branch"  #
+#   *para remover ramos remotos    #
+#                                  #
+#   git merge "new_branch"         #
+#   *para adicionar as alteraçoes  #
+#    do ramo ao master             #
+#                                  #
+#                                  #
+####################################
