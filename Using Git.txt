@@ -10,6 +10,9 @@ faz o commit das alteraçoes
 git pull
 faz o upload dos dados alterados
 
+git push origin "new_branch"
+faz o upload do ramo local para o online
+
 git branch
 ver os ramos do repositório
 
