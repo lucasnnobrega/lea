@@ -5,10 +5,18 @@
 /*
 Posição da função qant_x_preco() alterada pois a função
  q20() precisa saber que ela existe
+
+endereço de total = &total
+int *ptr = &total
+portanto
+
+*&ptr = &total
+
+
+
 */
 
-
-void qant_x_preco(float preco, int* total)
+void qant_x_preco(float preco, int *ptr)
 {
     int quantidade = 0;
 
@@ -17,15 +25,15 @@ void qant_x_preco(float preco, int* total)
     printf("%i \n", quantidade);
 
     printf("preco é: %f \n", preco);
-    printf("total: %f \n \n", total);
-    printf("total parcial: %f \n \n", *total);
-    printf("endereço de total: %d \n", &total); //aqui aparece um endereço
+    printf("total: %f \n \n", ptr);
+    printf("total parcial: %f \n \n", *ptr);
+    printf("endereço de total: %d \n", *&ptr); //aqui aparece o endereço de total OK
 
-    *total = *total + 1;//((float)quantidade * preco) essa equação não está funcionando
+    *ptr = 1;//((float)quantidade * preco) essa equação não está funcionando
 
     printf("preco é: %f \n", preco);
-    printf("total: %f \n \n", *total);
-    printf("endereço de total: %d \n", *&total);//aqui aparece outro totalmente diferente massa!!!!
+    printf("total: %f \n \n", *ptr);
+    printf("endereço de total: %d \n", *&ptr);//aqui aparece o endereco de total OK
 
 
 }
