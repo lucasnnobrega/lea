@@ -10,7 +10,7 @@ faz o commit das alteraçoes
 git pull
 faz o upload dos dados alterados
 
-git oull origin "new_branch"
+git pull origin "new_branch"
 faz o upload do ramo local para o online
 
 git branch
